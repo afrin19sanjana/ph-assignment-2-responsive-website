@@ -67,7 +67,7 @@ color:rgba(255, 255, 255, 1);
 /* shared css ends */
 /* headerpart starts */
 header{
-    background: #F7F7F7;
+    background: #FFFFFF;
 }
 /* header part ends  */
 
@@ -244,7 +244,7 @@ padding:60px 0px;
 .curriculam-card{
    text-align: center;
    max-width: 367px;
-   max-height: 476px;
+   
    border-radius: 18px;
    box-shadow: 1px 0px 5px -2px rgba(0,0,0,0.25);
    padding:0px 40px;
@@ -280,9 +280,11 @@ padding:60px 0px;
     border:none;
     background: transparent;
 }
-/* .bttn-one a{
-    color:rgba(100, 200, 255, 1)
-} */
+
+/* **************************************readmore button need to be fixed****************************************************** */
+.bttn-one a {
+    color:rgba(100, 200, 255, 1)       
+}
 .bttn-two{
     color:rgba(240, 170, 0, 1);
 }
@@ -312,8 +314,76 @@ padding:60px 0px;
 }
 /* responsive curriculam part end */
 /* our stories part starts */
+.our-stories{
+    background: url(../assets/bg.png), linear-gradient( rgba(255, 255, 255, 0.3), rgba(254, 163, 1, 0.3));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:90px 0px 190px 0px;
+}
+.stories-container-box{
+    justify-content: space-between;
+    gap:18px;
+}
+.stories-content{
+    background: rgba(255, 255, 255, 1);
+
+}
+.stories-content-main{
+   background: rgba(60, 216, 232, 1);
+   border-radius: 47px;
+   color:rgba(255, 255, 255, 1);
+   max-width: 174px;
+   padding:15px 19px;
+}
+.stories-content{
+    position: relative;
+    border-radius: 16px;
+}
+.stories-content img,
+.stories-content-element img {
+    border-radius: 16px 16px 0px 0px;
+}
+
+.stories-content-main {
+    position: absolute;
+    left:31px;
+    top: 338px;
+    }
+    .stories-content h2{
+    padding:36px 0px 47px 0px;
+    margin:0px 38px;
+    color:rgba(0, 0, 0, 1);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    
+}
+.stories-content p{
+    color:rgba(102, 102, 102, 1);
+    font-weight: 500;
+    font-size:0.9rem ;
+    line-height:1.75rem ;
+}
+.stories-content-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:10px;
+}
+.stories-content-box{
+    max-width:601px;
+}
+.stories-content-element{
+    background:rgba(255, 255, 255, 1) ;
+    border-radius: 16px;
+}
 /* our stories part ends */
 /* responsive our stories part starts */
+ @media (max-width: 576px){
+    .stories-content{
+        display: none;
+    } 
+ }
 /* responsive our stories part ends */
 /* footer part started */
 .footer-container{

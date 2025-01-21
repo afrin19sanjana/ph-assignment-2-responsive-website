@@ -194,8 +194,7 @@ max-width: 62px;
 @media (max-width: 576px){
     .banner{
         flex-direction: column;
-        flex-direction: column-reverse;
-       
+        flex-direction: column-reverse;  
     }
     .banner h1{
         font-weight: 700;
@@ -224,12 +223,12 @@ display: none;
 }
 /* responsive banner part ends */
 /* curriculum part starts*/
-#curriculum {
+.curriculum {
 background-image: url(../assets/bg.png);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-/* padding:60px 0px; */
+padding:60px 0px;
 }
 .curriculum-header{
     font-weight: 700;
@@ -301,6 +300,16 @@ background-size: cover;
 }
 /* curriculum part ends */
 /* responsive curriculam part started */
+ @media (max-width: 576px){
+.curriculum-card-container{
+    flex-direction: column;
+    gap:12px;
+
+}
+.icon-box{
+    display:none
+}
+}
 /* responsive curriculam part end */
 /* our stories part starts */
 /* our stories part ends */

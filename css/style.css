@@ -72,6 +72,7 @@ header{
 /* header part ends  */
 
 /* nav part starts */
+
 .nav-image img {
 max-width: 62px;
 }
@@ -88,7 +89,7 @@ max-width: 62px;
 .nav-content{
     justify-content: space-between;
     align-items: center;
-    padding:26px;
+    /* padding:26px; */
 }
 .icon-bar{
     display: none;
@@ -141,12 +142,18 @@ max-width: 62px;
     color: rgba(93, 88, 239, 1);
   }
 /* nav part ends */
+/* responsive nav part starts */
 @media (max-width: 576px) { 
     .nav-image img {
        display: block;
+       padding-bottom: 5px;
     }
     .nav-image .logo-name {
      visibility: hidden;
+ }
+
+ .nav-image img{
+    margin-top: 10px;
  }
  .menu-list,
  .primary-btn {
@@ -155,11 +162,10 @@ max-width: 62px;
  .icon-bar{
     display: block;
     font-size: 2rem;
-   
 }
-.nav-content{
+.nav-line{
     border-bottom:2px solid rgba(254, 163, 1, 1) ;
-    padding:5px 0px;
+    /* padding:5px 0px; */
 }
 }
 /* banner part starts */
@@ -167,6 +173,7 @@ max-width: 62px;
     justify-content: space-between;
     align-items: center;
 }
+
 .banner-content-image img {
     max-width: 310px;
 }
@@ -189,6 +196,14 @@ max-width: 62px;
     color:rgba(17, 17, 17, 1);
     padding:24px 0px;
 }
+.banner-attention{
+    font-size:2.8rem;
+    padding:20px;
+    color:rgba(1, 172, 253, 1);
+}
+ .banner-attention span{
+    color: #FFD700;
+ }
 /* banner part ends */
 /* responsive banner part starts */
 @media (max-width: 576px){
@@ -219,6 +234,13 @@ display: none;
     .btn-container{
       text-align: center;
       margin-left:20px;
+    }
+    .banner-attention{
+        font-size:1rem;
+        height: 40px;
+        padding:10px;
+        color:rgba(1, 172, 253, 1);
+        background-color: #ffff;
     }
 }
 /* responsive banner part ends */
@@ -280,16 +302,14 @@ padding:60px 0px;
     border:none;
     background: transparent;
 }
-
-/* **************************************readmore button need to be fixed****************************************************** */
-.bttn-one a {
-    color:rgba(100, 200, 255, 1)       
+.bttn-two a {
+    color:rgba(240, 170, 0, 1)
 }
-.bttn-two{
-    color:rgba(240, 170, 0, 1);
-}
-.bttn-three{
+.bttn-three a {
     color:rgba(135, 0, 255, 1);
+}
+.bttn-one a{
+    color:rgba(100, 200, 255, 1);
 }
 .icon-box{
     justify-content: center;
@@ -309,8 +329,13 @@ padding:60px 0px;
 
 }
 .icon-box{
-    display:none
+    display:none;
+    margin: 0;
 }
+.curriculum-header{
+    
+    padding:40px 0px 80px 20px;
+} 
 }
 /* responsive curriculam part end */
 /* our stories part starts */
@@ -321,35 +346,66 @@ padding:60px 0px;
     background-size: cover;
     padding:90px 0px 190px 0px;
 }
+.our-stories h2{
+    font-weight: 700;
+    color:rgba(0, 0, 0, 1);
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    text-align: center;
+    margin-bottom: 80px;
+}
 .stories-container-box{
-    justify-content: space-between;
-    gap:18px;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap:20px;
 }
 .stories-content{
     background: rgba(255, 255, 255, 1);
-
+    border-radius: 16px;
+    
 }
+
 .stories-content-main{
    background: rgba(60, 216, 232, 1);
    border-radius: 47px;
    color:rgba(255, 255, 255, 1);
-   max-width: 174px;
-   padding:15px 19px;
+   max-width:200px;
+   padding:14px 20px;
+   position: relative;
+   left: 63px;
+   top: -28px;
 }
-.stories-content{
-    position: relative;
-    border-radius: 16px;
-}
+
 .stories-content img,
 .stories-content-element img {
     border-radius: 16px 16px 0px 0px;
+    width:100%;
 }
 
-.stories-content-main {
-    position: absolute;
-    left:31px;
-    top: 338px;
-    }
+.stories-content-sub span {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 19px;
+    background: rgba(149, 178, 38, 1);
+    border-radius: 47px;
+    max-width: 174px;
+    position: relative;
+    left: 19px;
+    top: -12px;
+}
+.stories-content-sub .sub-story {
+    background: rgba(93, 88, 240, 1);
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 19px;
+    border-radius: 47px;
+    max-width: 174px;
+    position: relative;
+    left: 19px;
+    top: -12px;
+}
     .stories-content h2{
     padding:36px 0px 47px 0px;
     margin:0px 38px;
@@ -357,33 +413,79 @@ padding:60px 0px;
     font-weight: 700;
     font-size: 1.8rem;
     line-height: 3rem;
-    
+    text-align: left;
 }
+
 .stories-content p{
     color:rgba(102, 102, 102, 1);
     font-weight: 500;
     font-size:0.9rem ;
     line-height:1.75rem ;
+    padding-left: 38px;
+    padding-bottom: 34px;
 }
 .stories-content-box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap:10px;
 }
-.stories-content-box{
-    max-width:601px;
-}
+
 .stories-content-element{
     background:rgba(255, 255, 255, 1) ;
     border-radius: 16px;
 }
+.stories-content-element h4 {
+    font-weight: 700;
+    color:rgba(0, 0, 0, 1);
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+    padding:38px 19px 38px 33px;
+}
+.btn-container-last{
+  text-align: center;
+  margin-top: 80px;
+  
+}
+ .hidden-stories{
+    display: none;
+ }
 /* our stories part ends */
 /* responsive our stories part starts */
  @media (max-width: 576px){
     .stories-content{
         display: none;
     } 
- }
+    .stories-content-sub span{
+        width:103px;
+        font-size: 0.5rem;
+    }
+    .hidden-stories{
+        display: block;
+     }
+    .stories-content-sub .sub-story {
+        width:103px;
+        font-size: 0.5rem; 
+    }
+    br{
+        display:none;
+    }
+    .stories-content-element h4{
+        padding:10px 15px;
+        line-height: 1rem;
+    }
+    .stories-container-box{
+       
+        grid-template-columns: repeat(1, 1fr);
+      
+   }
+   .our-stories{
+    padding-bottom: 60px;
+   }
+   .our-stories h2{
+    margin-bottom: 20px;
+    margin-top: 0px;
+   }
+}
 /* responsive our stories part ends */
 /* footer part started */
 .footer-container{
@@ -423,7 +525,6 @@ padding:60px 0px;
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.25rem;
-     
 }
 
 .icon{
@@ -447,6 +548,8 @@ padding:60px 0px;
         font-size: 2.1rem;
         line-height: 2rem;
     }
-
+   .footer-container{
+    padding:65px 0px 60px 0px;
+   }
 }
 /* responsive footer part ends */
